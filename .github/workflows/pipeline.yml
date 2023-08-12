@@ -42,3 +42,17 @@
             with:
               service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
               api-key: ${{ secrets.MY_RENDER_API_KEY }}
+
+    ui_tests:
+        runs-on: ubuntu-latets
+        needs: deploy
+        steps:
+          - uses: actions/checkout@v3
+          - uses: actions/setup-node@v3
+          with:
+            node-version: 18.x
+            cache: 'npm'
+            
+          run: npm install
+          run: npm run test:unit
+
