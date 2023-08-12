@@ -57,4 +57,3 @@
                 run: npx playwright install --with-deps
               - name: Run Playwright tests
                 run: npm run test:ui
-              - uses: actions/upload-artifact@v3
