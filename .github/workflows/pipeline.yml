@@ -26,9 +26,8 @@ jobs:
       with:
         node-version: 18.x
         cache: 'npm'
-
     - run: npm install
 
     - run: npm run test:unit
-
-    - run: echo "Nivanovbgn"
+    - name: Softuni username
+      run: echo "Nivanovbgn"
