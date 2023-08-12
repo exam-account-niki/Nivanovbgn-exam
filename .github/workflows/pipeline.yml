@@ -56,5 +56,5 @@
               - name: Install Playwright Browsers
                 run: npx playwright install --with-deps
               - name: Run Playwright tests
-                run: npm run test:unit
+                run: npm run test:ui
               - uses: actions/upload-artifact@v3
